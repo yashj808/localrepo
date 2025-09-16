@@ -1,0 +1,11 @@
+event_id,event_name,event_type,event_date,event_time,event_duration,event_location,event_capacity,event_registered,event_organizer,event_description,event_target_audience,event_registration_status
+EVT-0001,Tech Talk: AI in Indian Startups,Seminar,2024-03-05,16:00,2,Seminar Hall A,150,127,Rajesh Kulkarni & CS Dept,Industry insights on AI adoption in Indian startup ecosystem,Students,Open
+EVT-0002,MBA Admissions Guidance Session,Workshop,2024-03-08,14:00,3,Conference Room B,50,48,Priya Mehta & Career Cell,Comprehensive guide to top B-schools and preparation strategy,Students,Open
+EVT-0003,Annual Alumni-Student Cricket Match,Social,2024-03-10,09:00,4,Sports Ground,44,44,Sports Committee,Friendly cricket match between current students and alumni,All,Closed
+EVT-0004,Data Science Bootcamp,Workshop,2024-03-12,10:00,6,Computer Lab 3,30,30,Vikram Singh & IT Dept,Hands-on workshop on Python and ML for beginners,Students,Waitlist
+EVT-0005,Startup Funding Masterclass,Career Fair,2024-03-15,15:00,3,Auditorium,200,156,Entrepreneurship Cell,Learn from successful founders about raising funds in India,All,Open
+EVT-0006,Women in Tech Panel,Conference,2024-03-18,17:00,2,Main Hall,100,89,Anjali Sharma & Meera Joshi,Inspiring stories from women leaders in technology,All,Open
+EVT-0007,Finance & Banking Careers,Career Fair,2024-03-20,14:30,3,Lecture Hall 2,80,72,Arjun Nair & Placement Cell,Opportunities in investment banking and financial services,Students,Open
+EVT-0008,Design Thinking Workshop,Workshop,2024-03-22,10:00,4,Innovation Lab,40,38,Ritika Bansal & Design Dept,Learn design thinking principles for product development,Students,Open
+EVT-0009,Alumni Mentorship Program Launch,Orientation,2024-03-25,16:00,2,Conference Hall,120,95,Alumni Relations Office,Connect with alumni mentors for career guidance,Students,Open
+EVT-0010,Holi Celebration & Reunion,Social,2024-03-26,11:00,5,Campus Grounds,500,412,Student & Alumni Committee,Celebrate Holi with fellow alumni and current students,All,Open

@@ -1,0 +1,21 @@
+alumni_id,alumni_name,alumni_graduation_year,alumni_degree,alumni_major,alumni_current_company,alumni_position,alumni_location,alumni_email
+ALM-0001,Rajesh Kulkarni,2015,Bachelor's,Computer Science,Infosys,Tech Lead,"Bangalore, India",rajesh.kulkarni2015@alumni.edu
+ALM-0002,Priya Mehta,2018,Master's,Business Administration,Reliance Industries,Senior Manager,"Mumbai, India",priya.mehta2018@alumni.edu
+ALM-0003,Amit Verma,2020,Bachelor's,Mechanical Engineering,Tata Motors,Design Engineer,"Pune, India",amit.verma2020@alumni.edu
+ALM-0004,Sneha Reddy,2016,PhD,Biotechnology,Biocon,Research Scientist,"Bangalore, India",sneha.reddy2016@alumni.edu
+ALM-0005,Vikram Singh,2019,Master's,Data Science,Flipkart,Data Scientist,"Bangalore, India",vikram.singh2019@alumni.edu
+ALM-0006,Anjali Sharma,2017,Bachelor's,Electronics Engineering,Samsung India,Hardware Engineer,"Noida, India",anjali.sharma2017@alumni.edu
+ALM-0007,Arjun Nair,2021,Master's,Finance,HDFC Bank,Investment Analyst,"Mumbai, India",arjun.nair2021@alumni.edu
+ALM-0008,Kavitha Iyer,2014,Bachelor's,Civil Engineering,L&T Construction,Project Manager,"Chennai, India",kavitha.iyer2014@alumni.edu
+ALM-0009,Rohit Agarwal,2022,Master's,Computer Science,Google India,Software Engineer,"Hyderabad, India",rohit.agarwal2022@alumni.edu
+ALM-0010,Divya Krishnan,2016,Bachelor's,Architecture,Hafeez Contractor,Architect,"Mumbai, India",divya.krishnan2016@alumni.edu
+ALM-0011,Suresh Patel,2019,PhD,Chemistry,Dr. Reddy's Labs,Senior Researcher,"Hyderabad, India",suresh.patel2019@alumni.edu
+ALM-0012,Meera Joshi,2020,Master's,Artificial Intelligence,Microsoft India,ML Engineer,"Bangalore, India",meera.joshi2020@alumni.edu
+ALM-0013,Arun Kumar,2015,Bachelor's,Journalism,The Hindu,Senior Journalist,"Delhi, India",arun.kumar2015@alumni.edu
+ALM-0014,Pooja Deshmukh,2018,Master's,Marketing,Hindustan Unilever,Brand Manager,"Mumbai, India",pooja.deshmukh2018@alumni.edu
+ALM-0015,Karthik Subramanian,2017,Bachelor's,Electrical Engineering,Wipro,Technical Lead,"Chennai, India",karthik.subramanian2017@alumni.edu
+ALM-0016,Nandini Gupta,2021,Master's,Psychology,Apollo Hospitals,Clinical Psychologist,"Delhi, India",nandini.gupta2021@alumni.edu
+ALM-0017,Siddharth Malhotra,2016,Bachelor's,Commerce,Deloitte India,Senior Auditor,"Gurgaon, India",siddharth.malhotra2016@alumni.edu
+ALM-0018,Ananya Rao,2019,Master's,Environmental Science,TERI,Environmental Consultant,"Delhi, India",ananya.rao2019@alumni.edu
+ALM-0019,Varun Chopra,2020,Bachelor's,Information Technology,TCS,Software Developer,"Pune, India",varun.chopra2020@alumni.edu
+ALM-0020,Ritika Bansal,2022,Master's,Design,Titan Company,Product Designer,"Bangalore, India",ritika.bansal2022@alumni.edu

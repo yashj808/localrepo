@@ -1,0 +1,11 @@
+message_id,message_sender,message_recipient,message_subject,message_content,message_type,message_priority,message_timestamp,message_status
+MSG-0001,Rajesh Kulkarni,Aadhya Pillai,Mentorship Program - Tech Career Guidance,"Hi Aadhya, I'd be happy to guide you in your tech career journey. Let's connect this weekend.",Invitation,High,2024-02-15 10:30:00,Delivered
+MSG-0002,Priya Mehta,Kabir Choudhury,MBA Insights Session,"Dear Kabir, Join me for a session on consulting careers and MBA opportunities at top firms.",Announcement,Medium,2024-02-16 14:15:00,Read
+MSG-0003,Alumni Relations,All Students,Alumni-Student Networking Event 2024,"Connect with successful alumni from various industries at our annual networking event!",Invitation,High,2024-02-17 09:00:00,Sent
+MSG-0004,Vikram Singh,Reyansh Thakur,Data Science Workshop,"Hey Reyansh, I'm conducting a workshop on ML in production. Would love to see you there!",Invitation,Medium,2024-02-18 11:45:00,Delivered
+MSG-0005,Meera Joshi,Navya Hegde,Google Summer of Code Preparation,"Hi Navya, Here are some tips for cracking GSoC based on my experience last year.",Update,Low,2024-02-19 16:20:00,Read
+MSG-0006,Placement Cell,All Alumni,Campus Recruitment Drive,"Dear Alumni, We invite you to participate as interviewers for our placement season.",Announcement,High,2024-02-20 10:00:00,Sent
+MSG-0007,Anjali Sharma,Saanvi Bhat,Electronics Project Guidance,"Hi Saanvi, I can help with your final year project on embedded systems. Let's discuss.",Update,Medium,2024-02-21 13:30:00,Delivered
+MSG-0008,Arjun Nair,Shaurya Agnihotri,Finance Career Roadmap,"Dear Shaurya, Sharing resources for CFA preparation and investment banking careers.",Newsletter,Low,2024-02-22 15:45:00,Read
+MSG-0009,Divya Krishnan,Anvi Chatterjee,Architecture Portfolio Review,"Hi Anvi, I'd be glad to review your portfolio and share feedback from industry perspective.",Invitation,Medium,2024-02-23 17:00:00,Delivered
+MSG-0010,Student Council,All Alumni,Annual Alumni Meet 2024,"Save the date! Join us for the grand alumni reunion on March 15, 2024.",Announcement,High,2024-02-24 09:30:00,Sent

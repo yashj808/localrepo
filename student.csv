@@ -1,0 +1,21 @@
+student_id,student_name,student_enrollment_year,student_program,student_major,student_year,student_gpa,student_status,student_email
+STU-0001,Aadhya Pillai,2023,Undergraduate,Computer Science,2nd,3.8,Active,aadhya.pillai@student.edu
+STU-0002,Aryan Mishra,2022,Undergraduate,Mechanical Engineering,3rd,3.5,Active,aryan.mishra@student.edu
+STU-0003,Ishaan Pandey,2024,Undergraduate,Business Administration,1st,3.9,Active,ishaan.pandey@student.edu
+STU-0004,Saanvi Bhat,2021,Undergraduate,Electronics Engineering,4th,3.7,Active,saanvi.bhat@student.edu
+STU-0005,Advait Shetty,2023,Graduate,Data Science,1st,3.6,Active,advait.shetty@student.edu
+STU-0006,Diya Kapoor,2022,Undergraduate,Biotechnology,3rd,3.85,Active,diya.kapoor@student.edu
+STU-0007,Vihaan Saxena,2024,Undergraduate,Civil Engineering,1st,3.4,Active,vihaan.saxena@student.edu
+STU-0008,Anvi Chatterjee,2021,Undergraduate,Architecture,4th,3.75,Active,anvi.chatterjee@student.edu
+STU-0009,Reyansh Thakur,2023,Graduate,Artificial Intelligence,1st,3.9,Active,reyansh.thakur@student.edu
+STU-0010,Kiara Menon,2022,Undergraduate,Psychology,3rd,3.65,Active,kiara.menon@student.edu
+STU-0011,Ayaan Dubey,2024,Undergraduate,Electrical Engineering,1st,3.55,Active,ayaan.dubey@student.edu
+STU-0012,Navya Hegde,2021,Undergraduate,Computer Science,4th,3.92,Active,navya.hegde@student.edu
+STU-0013,Kabir Choudhury,2023,Graduate,Business Administration,1st,3.7,Active,kabir.choudhury@student.edu
+STU-0014,Aanya Jain,2022,Undergraduate,Chemistry,3rd,3.8,Active,aanya.jain@student.edu
+STU-0015,Vivaan Rathore,2024,Undergraduate,Information Technology,1st,3.45,Active,vivaan.rathore@student.edu
+STU-0016,Myra Sengupta,2021,Undergraduate,Marketing,4th,3.88,Active,myra.sengupta@student.edu
+STU-0017,Shaurya Agnihotri,2023,Graduate,Finance,1st,3.75,Active,shaurya.agnihotri@student.edu
+STU-0018,Zara Khanna,2022,Undergraduate,Environmental Science,3rd,3.6,Active,zara.khanna@student.edu
+STU-0019,Atharv Purohit,2024,Undergraduate,Physics,1st,3.95,Active,atharv.purohit@student.edu
+STU-0020,Sara Venkatesh,2021,Undergraduate,Design,4th,3.82,Active,sara.venkatesh@student.edu
