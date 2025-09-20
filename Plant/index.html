@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Medicinal Plants Database</title>
+    <style>
+        /* All the CSS from the previous example goes here. It is unchanged. */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lora:ital,wght@0,400;1,400&display=swap' );
+        :root { --primary-color: #2d6a4f; --secondary-color: #f7f7f7; --accent-color: #40916c; --text-color: #333; --card-bg: #ffffff; --shadow: 0 8px 25px rgba(0, 0, 0, 0.1); --border-radius: 15px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--secondary-color); color: var(--text-color); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 25px; }
+        .header { text-align: center; padding: 30px 20px; margin-bottom: 30px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; border-radius: var(--border-radius); }
+        .header h1 { font-size: 2.5rem; font-weight: 700; }
+        .header p { font-size: 1.1rem; opacity: 0.9; margin-top: 5px; }
+        .search-container { margin-bottom: 30px; position: relative; }
+        #searchInput { width: 100%; padding: 18px 25px; font-size: 1.1rem; border: 2px solid #e0e0e0; border-radius: 50px; outline: none; transition: border-color 0.3s, box-shadow 0.3s; }
+        #searchInput:focus { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(45, 106, 79, 0.2); }
+        #plantGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+        .plant-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--shadow); overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .plant-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
+        .plant-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .plant-card-content { padding: 20px; }
+        .plant-card-content h3 { font-size: 1.3rem; color: var(--primary-color); margin-bottom: 5px; }
+        .plant-card-content p { font-family: 'Lora', serif; font-style: italic; color: #666; }
+        #statusMessage { text-align: center; padding: 40px; font-size: 1.2rem; color: #888; display: none; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; z-index: 1000; }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-container { background: var(--card-bg); border-radius: var(--border-radius); width: 90%; max-width: 900px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 50px rgba(0,0,0,0.3); transform: scale(0.9); transition: transform 0.3s; }
+        .modal-overlay.active .modal-container { transform: scale(1); }
+        .modal-header { padding: 25px; text-align: center; position: relative; }
+        .modal-header h2 { font-size: 2rem; color: var(--primary-color); }
+        .modal-header p { font-family: 'Lora', serif; font-style: italic; font-size: 1.2rem; color: #555; }
+        .modal-close-btn { position: absolute; top: 15px; right: 15px; background: #e0e0e0; border: none; width: 35px; height: 35px; border-radius: 50%; font-size: 1.5rem; font-weight: bold; cursor: pointer; transition: background 0.3s, transform 0.3s; }
+        .modal-close-btn:hover { background: #ccc; transform: rotate(90deg); }
+        .modal-body { padding: 0 30px 30px 30px; }
+        .modal-image { width: 100%; height: 300px; object-fit: cover; border-radius: var(--border-radius); margin-bottom: 20px; }
+        .detail-section { margin-bottom: 20px; }
+        .detail-section h4 { font-size: 1.1rem; color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 10px; }
+        .detail-section p, .detail-section ul { font-size: 1rem; line-height: 1.7; color: #444; }
+        .detail-section ul { list-style: none; }
+        .detail-section li { background: var(--secondary-color); padding: 8px 12px; border-radius: 8px; margin-bottom: 5px; display: inline-block; margin-right: 5px; }
+        @media (max-width: 768px) { .header h1 { font-size: 2rem; } .modal-header h2 { font-size: 1.5rem; } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1>Indian Medicinal Plants</h1>
+            <p>An interactive guide to traditional Ayurvedic herbs</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by common, scientific, or Hindi name...">
+        </div>
+
+        <div id="plantGrid"></div>
+        <div id="statusMessage"></div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div class="modal-overlay" id="plantModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <p id="modal-scientific-name"></p>
+                <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Plant Image">
+                <div class="detail-section"><h4>Description</h4><p id="modal-description"></p></div>
+                <div class="detail-section"><h4>Growing Tips</h4><p id="modal-growing-tips"></p></div>
+                <div class="detail-section"><h4>Medicinal Uses</h4><ul id="modal-medicinal-uses"></ul></div>
+                <div class="detail-section"><h4>Properties</h4><ul id="modal-properties"></ul></div>
+                <div class="detail-section"><h4>Parts Used</h4><ul id="modal-parts-used"></ul></div>
+                <div class="detail-section"><h4>Habitat</h4><p id="modal-habitat"></p></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- CONFIGURATION ---
+        const API_URL = 'http://localhost:3000/api/plants';
+        let allPlants = []; // Cache to store all plants to avoid re-fetching
+
+        // --- DOM ELEMENTS ---
+        const plantGrid = document.getElementById('plantGrid' );
+        const searchInput = document.getElementById('searchInput');
+        const statusMessage = document.getElementById('statusMessage');
+        const modal = document.getElementById('plantModal');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+        // --- API & DATA HANDLING ---
+        async function fetchPlants(query = '') {
+            try {
+                showStatus('Loading plants...');
+                const response = await fetch(`${API_URL}?search=${encodeURIComponent(query)}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const plants = await response.json();
+                displayPlants(plants);
+            } catch (error) {
+                console.error('Failed to fetch plants:', error);
+                showStatus('Error: Could not connect to the database.', true);
+            }
+        }
+
+        // --- DISPLAY FUNCTIONS ---
+        function displayPlants(plants) {
+            plantGrid.innerHTML = '';
+            if (plants.length === 0) {
+                showStatus('No plants found for your search.', false);
+                return;
+            }
+            hideStatus();
+            plants.forEach(plant => {
+                const card = document.createElement('div');
+                card.className = 'plant-card';
+                card.innerHTML = `
+                    <img src="${plant.Image_URL}" alt="${plant.Plant_Name}" loading="lazy">
+                    <div class="plant-card-content">
+                        <h3>${plant.Plant_Name}</h3>
+                        <p><em>${Array.isArray(plant.Scientific_Name) ? plant.Scientific_Name.join(', ') : plant.Scientific_Name}</em></p>
+                    </div>
+                `;
+                card.addEventListener('click', () => openModal(plant));
+                plantGrid.appendChild(card);
+            });
+        }
+
+        function openModal(plant) {
+            document.getElementById('modal-title').textContent = plant.Plant_Name;
+            document.getElementById('modal-scientific-name').textContent = Array.isArray(plant.Scientific_Name) ? plant.Scientific_Name.join(', ') : plant.Scientific_Name;
+            document.getElementById('modal-image').src = plant.Image_URL;
+            document.getElementById('modal-description').textContent = plant.Description;
+            document.getElementById('modal-growing-tips').textContent = plant.Growing_Tips;
+            document.getElementById('modal-habitat').textContent = plant.Habitat;
+
+            // Function to populate list items
+            const createList = (elementId, items) => {
+                const ul = document.getElementById(elementId);
+                ul.innerHTML = '';
+                if (Array.isArray(items)) {
+                    items.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        ul.appendChild(li);
+                    });
+                } else if (items) { // Handle single string items
+                    const li = document.createElement('li');
+                    li.textContent = items;
+                    ul.appendChild(li);
+                }
+            };
+
+            createList('modal-medicinal-uses', plant.Medicinal_Uses);
+            createList('modal-properties', plant.Properties);
+            createList('modal-parts-used', plant.Parts_Used);
+
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // --- UTILITY FUNCTIONS ---
+        function showStatus(message, isError = false) {
+            plantGrid.innerHTML = '';
+            statusMessage.textContent = message;
+            statusMessage.style.color = isError ? '#d9534f' : '#888';
+            statusMessage.style.display = 'block';
+        }
+
+        function hideStatus() {
+            statusMessage.style.display = 'none';
+        }
+
+        // --- EVENT LISTENERS ---
+        searchInput.addEventListener('input', (e) => {
+            fetchPlants(e.target.value);
+        });
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // --- INITIAL LOAD ---
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchPlants(); // Fetch all plants on initial load
+        });
+    </script>
+</body>
+</html>
