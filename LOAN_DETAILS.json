@@ -15,7 +15,10 @@
             "repayment_frequency": "Monthly",
             "prepayment_penalty": "Low (1%)"
         },
-        "min_monthly_income_for_max_loan": 4985.83
+        "min_monthly_income_for_max_loan": 4985.83,
+        "lender_type": "MFI",
+        "lender_name": "Gramin Shakti MFI",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "f782107f-d70e-4f97-ab32-690750f897b6",
@@ -33,7 +36,10 @@
             "repayment_frequency": "Monthly",
             "prepayment_penalty": "Low (2%)"
         },
-        "min_monthly_income_for_max_loan": 5967.6
+        "min_monthly_income_for_max_loan": 5967.6,
+        "lender_type": "MFI",
+        "lender_name": "Gramin Shakti MFI",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "7e0fd074-6d8f-4d65-b4e1-c8373027c7aa",
@@ -51,7 +57,10 @@
             "repayment_frequency": "Bi-Weekly",
             "prepayment_penalty": "Medium (3%)"
         },
-        "min_monthly_income_for_max_loan": 5615.68
+        "min_monthly_income_for_max_loan": 5615.68,
+        "lender_type": "MFI",
+        "lender_name": "Jeevan Microfinance",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "83e8791a-34ca-489d-af4c-730d1250632b",
@@ -69,7 +78,10 @@
             "repayment_frequency": "Bi-Weekly",
             "prepayment_penalty": "Medium (3%)"
         },
-        "min_monthly_income_for_max_loan": 17652.28
+        "min_monthly_income_for_max_loan": 17652.28,
+        "lender_type": "NBFC",
+        "lender_name": "Kuber Capital",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "607a51f0-ff94-40e7-9b22-7ad85ba7a067",
@@ -87,7 +99,10 @@
             "repayment_frequency": "Weekly",
             "prepayment_penalty": "Medium (4%)"
         },
-        "min_monthly_income_for_max_loan": 16044.0
+        "min_monthly_income_for_max_loan": 16044.0,
+        "lender_type": "NBFC",
+        "lender_name": "Pragati FinServ",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "e4d878ef-07f5-4d18-a4cf-d91e3de8c821",
@@ -105,7 +120,10 @@
             "repayment_frequency": "Monthly",
             "prepayment_penalty": "Low (1%)"
         },
-        "min_monthly_income_for_max_loan": 8912.11
+        "min_monthly_income_for_max_loan": 8912.11,
+        "lender_type": "Bank",
+        "lender_name": "Vikas Bank",
+        "lender_specific_constraint": "Applicant must be Salaried/High Stability Profile."
     },
     {
         "loan_id": "0fe23bb8-9fe5-490e-965e-b24dc946f752",
@@ -123,7 +141,10 @@
             "repayment_frequency": "Monthly",
             "prepayment_penalty": "Low (1%)"
         },
-        "min_monthly_income_for_max_loan": 10288.49
+        "min_monthly_income_for_max_loan": 10288.49,
+        "lender_type": "Bank",
+        "lender_name": "Bharat Bank",
+        "lender_specific_constraint": "Applicant must be Salaried/High Stability Profile."
     },
     {
         "loan_id": "3cf60884-4c36-4a4c-8270-b74991843eaf",
@@ -141,7 +162,10 @@
             "repayment_frequency": "Bi-Weekly",
             "prepayment_penalty": "Medium (3%)"
         },
-        "min_monthly_income_for_max_loan": 28564.12
+        "min_monthly_income_for_max_loan": 28564.12,
+        "lender_type": "NBFC",
+        "lender_name": "Pragati FinServ",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "2265a5db-15d9-45f9-9506-0277deb6efd1",
@@ -159,7 +183,10 @@
             "repayment_frequency": "Weekly",
             "prepayment_penalty": "High (5%)"
         },
-        "min_monthly_income_for_max_loan": 7002.73
+        "min_monthly_income_for_max_loan": 7002.73,
+        "lender_type": "MFI",
+        "lender_name": "Gramin Shakti MFI",
+        "lender_specific_constraint": "None (Accepts Self-Employed/Daily Wage)."
     },
     {
         "loan_id": "b2ed061d-9c36-4a75-8cd1-d0ad874e1e8c",
@@ -177,6 +204,9 @@
             "repayment_frequency": "Monthly",
             "prepayment_penalty": "None"
         },
-        "min_monthly_income_for_max_loan": 11768.38
+        "min_monthly_income_for_max_loan": 11768.38,
+        "lender_type": "Bank",
+        "lender_name": "Vikas Bank",
+        "lender_specific_constraint": "Applicant must be Salaried/High Stability Profile."
     }
 ]
